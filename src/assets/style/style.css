@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #aaaaaa;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+span {
+  position: absolute;
+  pointer-events: none;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+  animation: out-mouse-move 1s linear infinite;
+}
+span::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  background-image: url("../images/kkmote.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: in-mouse-move 1s linear infinite;
+}
+
+@keyframes in-mouse-move {
+  0% {
+    transform: translate(0) rotate(0deg);
+  }
+  100% {
+    transform: translate(300px) rotate(360deg);
+  }
+}
+@keyframes out-mouse-move {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
